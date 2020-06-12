@@ -9,6 +9,7 @@
 
 		<div class="promo__wrapper_article">
                 <h1 class="promo__header"><?php the_field( 'page_article_title' ); ?></h1>
+				<h2 class="promo__subheader"><p class="has-medium-font-size">Modified <?php the_modified_date(' d.m.Y '); ?></p></h2>
             </div>
         </div>
     </section>
