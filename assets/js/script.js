@@ -26,21 +26,21 @@ $(document).ready(function(){
 	// Modal windows
 
 	// calculate width of scroll line 
-	function calcScroll() {                               
-		let div = document.createElement('div');
+	// function calcScroll() {                               
+	// 	let div = document.createElement('div');
 
-		div.style.width = '50px';
-		div.style.height = '50px';
-		div.style.overflowY = 'scroll';
-		div.style.visibility = 'hidden';
+	// 	div.style.width = '50px';
+	// 	div.style.height = '50px';
+	// 	div.style.overflowY = 'scroll';
+	// 	div.style.visibility = 'hidden';
 
-		document.body.appendChild(div);
-		let scrollWidht = div.offsetWidth - div.clientWidth;
+	// 	document.body.appendChild(div);
+	// 	let scrollWidht = div.offsetWidth - div.clientWidth;
 
-		return scrollWidht;
-	}
+	// 	return scrollWidht;
+	// }
 	// scroll line width
-	const scroll = calcScroll();   
+	// const scroll = calcScroll();   
 	            
 
 	$('[data-modal=consultation]').on('click', function(){
@@ -159,8 +159,4 @@ $(document).ready(function(){
 	//скрипт для анимаций
 	// new WOW().init();
 });
-
-
-
-
 
