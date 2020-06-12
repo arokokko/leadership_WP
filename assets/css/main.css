@@ -14,6 +14,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -575,6 +576,10 @@ template {
   color: #ffffff;
 }
 
+.promo__subheader p {
+  text-align: center;
+}
+
 .promo__icons {
   margin-top: 65px;
   width: 450px;
@@ -736,6 +741,7 @@ a.promo__item:hover {
 
 .consultation_btn {
   height: 55px;
+  font-size: 16px;
 }
 
 .card_btn {
@@ -1229,7 +1235,7 @@ a.promo__item:hover {
 
 .modal {
   position: absolute;
-  top: 25%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 380px;
@@ -1306,7 +1312,7 @@ a.promo__item:hover {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .promo__header {
+  .promo__header, .promo__subheader {
     text-align: center;  
   }
   .promo__wrapper {
