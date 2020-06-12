@@ -40,28 +40,21 @@ $(document).ready(function(){
 		return scrollWidht;
 	}
 	// scroll line width
-	const scroll = calcScroll();              
+	const scroll = calcScroll();   
+	            
 
 	$('[data-modal=consultation]').on('click', function(){
 		$('.overlay, #consultation').fadeIn('slow'); 
-		$('body').css('overflow', 'hidden');
-		$('body').css('margin-right', `${scroll}px`);
+		// $('body').css('overflow', 'hidden').css('margin-right', `${scroll}px`);
 		
 	});
 
 	$('[data-modal=question]').on('click', function(){
 		$('.overlay, #question').fadeIn('slow');
-		$('body').css('overflow', 'hidden');
-		$('body').css('margin-right', `${scroll}px`);
+		// $('body').css('overflow', 'hidden').css('margin-right', `${scroll}px`);
 		
 	});
 	
-	// $('.card_btn').each(function(i) {
-	// 	$(this).on('click', function() {
-	// 		$('#order .modal__descr').text($('.card__subtitle').eq(i).text());
-	// 		$('.overlay, #order').fadeIn('slow');
-	// 	});
-	// });
 
 	$('.card_btn').each(function(i) {
 
@@ -69,24 +62,23 @@ $(document).ready(function(){
             let descr = $('.card__subtitle').eq(i).text();
             $('#order .modal__descr').text(descr);
 			$('.overlay, #order').fadeIn('slow'); 
-			$('body').css('overflow', 'hidden');
-			$('body').css('margin-right', `${scroll}px`);
+			// $('body').css('overflow', 'hidden').css('margin-right', `${scroll}px`);
         });
 
   	});
-
+	
+	// закрытие модального окна
 	$('.modal__close').on('click', function() {
-		$('.overlay, #consultation, #question, #order, #thanks').fadeOut('fast'); 
-		$('body').css('overflow', 'visible');
-		$('body').css('margin-right', `0px`);
+		$('.overlay, #consultation, #question, #order, #thanks').fadeOut('slow');
+		// $('body').css('margin-right', '0px').css('overflow', 'visible');
+		
 	});
 
 	// закрытие модального окна щелчком по пустому полю
 	$(window).on('click', function(e) {
         if (e.target.classList.contains('overlay')) {
-            $('.overlay, #consultation, #question, #thanks, #order').fadeOut('fast'); 
-			$('body').css('overflow', 'visible');
-			$('body').css('margin-right', `0px`);
+			$('body').css('overflow', 'visible').css('margin-right', `0px`);
+            $('.overlay, #consultation, #question, #thanks, #order').fadeOut(); 
 			
         }
 	});
@@ -165,7 +157,7 @@ $(document).ready(function(){
 	
 
 	//скрипт для анимаций
-	new WOW().init();
+	// new WOW().init();
 });
 
 
