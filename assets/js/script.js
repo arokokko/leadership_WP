@@ -26,11 +26,15 @@ $(document).ready(function(){
 	// Modal windows
 
 	$('[data-modal=consultation]').on('click', function(){
-		$('.overlay, #consultation').fadeIn('slow');
+		$('.overlay, #consultation').fadeIn('slow', function() {
+			$('body').css('overflow', 'hidden');
+		});
 	});
 
 	$('[data-modal=question]').on('click', function(){
-		$('.overlay, #question').fadeIn('slow');
+		$('.overlay, #question').fadeIn('slow', function() {
+			$('body').css('overflow', 'hidden');
+		});
 	});
 	
 	// $('.card_btn').each(function(i) {
@@ -51,13 +55,17 @@ $(document).ready(function(){
   	});
 
 	$('.modal__close').on('click', function() {
-		$('.overlay, #consultation, #question, #order, #thanks').fadeOut();
+		$('.overlay, #consultation, #question, #order, #thanks').fadeOut('fast', function() {
+			$('body').css('overflow', 'visible');
+		});
 	});
 
 	// закрытие модального окна щелчком по пустому полю
 	$(window).on('click', function(e) {
         if (e.target.classList.contains('overlay')) {
-            $('.overlay, #consultation, #question, #thanks, #order').fadeOut();
+            $('.overlay, #consultation, #question, #thanks, #order').fadeOut('fast', function() {
+				$('body').css('overflow', 'visible');
+			});
         }
 	});
 	
