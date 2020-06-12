@@ -17,7 +17,7 @@
             <div class="modal__descr">and we will reply you nearest time</div>
             <form method="POST" action="#" class="form__feed modal_form">
                 <input name="name" required placeholder="Your name" type="text">
-                <input name="phone" required placeholder="Your phone number" type="number">
+                <input name="phone" required placeholder="Your phone number" type="text">
                 <input type="email" name="email" required placeholder="Your E-mail">
                 <textarea name="text" placeholder="Your question"></textarea>
                 <button class="button consultation_btn modal_btn">Ask</button>
@@ -30,7 +30,7 @@
             <div class="modal__descr">and we will reply you nearest time</div>
             <form method="POST" action="#" class="form__feed modal_form">
                 <input name="name" required placeholder="Your name" type="text">
-                <input name="phone" required placeholder="Your phone number" type="number">
+                <input name="phone" required placeholder="Your phone number" type="text">
                 <input type="email" name="email" required placeholder="Your E-mail">
                 <textarea name="text" placeholder="Theme of consultation"></textarea>
                 <button class="button consultation_btn modal_btn">Book consultation</button>
@@ -43,7 +43,7 @@
             <div class="modal__descr">Пульсометер FT-1</div>
             <form method="POST" action="#" class="form__feed modal_form">
                 <input name="name" required placeholder="Your name" type="text">
-                <input name="phone" required placeholder="Your phone number" type="number">
+                <input name="phone" required placeholder="Your phone number" type="text">
                 <input type="email" required name="email" placeholder="Your E-mail">
                 <textarea name="text" placeholder="Additional questions"></textarea>
                 <button class="button consultation_btn modal_btn">Book</button>
