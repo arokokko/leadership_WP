@@ -25,16 +25,35 @@ $(document).ready(function(){
 
 	// Modal windows
 
+	// calculate width of scroll line 
+	function calcScroll() {                               
+		let div = document.createElement('div');
+
+		div.style.width = '50px';
+		div.style.height = '50px';
+		div.style.overflowY = 'scroll';
+		div.style.visibility = 'hidden';
+
+		document.body.appendChild(div);
+		let scrollWidht = div.offsetWidth - div.clientWidth;
+
+		return scrollWidht;
+	}
+	// scroll line width
+	const scroll = calcScroll();              
+
 	$('[data-modal=consultation]').on('click', function(){
-		$('.overlay, #consultation').fadeIn('slow', function() {
-			$('body').css('overflow', 'hidden');
-		});
+		$('.overlay, #consultation').fadeIn('slow'); 
+		$('body').css('overflow', 'hidden');
+		$('body').css('margin-right', `${scroll}px`);
+		
 	});
 
 	$('[data-modal=question]').on('click', function(){
-		$('.overlay, #question').fadeIn('slow', function() {
-			$('body').css('overflow', 'hidden');
-		});
+		$('.overlay, #question').fadeIn('slow');
+		$('body').css('overflow', 'hidden');
+		$('body').css('margin-right', `${scroll}px`);
+		
 	});
 	
 	// $('.card_btn').each(function(i) {
@@ -49,23 +68,26 @@ $(document).ready(function(){
         $(this).on('click', function() {
             let descr = $('.card__subtitle').eq(i).text();
             $('#order .modal__descr').text(descr);
-			$('.overlay, #order').fadeIn('slow');
+			$('.overlay, #order').fadeIn('slow'); 
+			$('body').css('overflow', 'hidden');
+			$('body').css('margin-right', `${scroll}px`);
         });
 
   	});
 
 	$('.modal__close').on('click', function() {
-		$('.overlay, #consultation, #question, #order, #thanks').fadeOut('fast', function() {
-			$('body').css('overflow', 'visible');
-		});
+		$('.overlay, #consultation, #question, #order, #thanks').fadeOut('fast'); 
+		$('body').css('overflow', 'visible');
+		$('body').css('margin-right', `0px`);
 	});
 
 	// закрытие модального окна щелчком по пустому полю
 	$(window).on('click', function(e) {
         if (e.target.classList.contains('overlay')) {
-            $('.overlay, #consultation, #question, #thanks, #order').fadeOut('fast', function() {
-				$('body').css('overflow', 'visible');
-			});
+            $('.overlay, #consultation, #question, #thanks, #order').fadeOut('fast'); 
+			$('body').css('overflow', 'visible');
+			$('body').css('margin-right', `0px`);
+			
         }
 	});
 	
