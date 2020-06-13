@@ -189,8 +189,8 @@
                     <img src="<?php the_field( 'first_review_img', 2 ); ?>" alt="photo" class="feedback__img">
                     <div class="feedback__text">
                         <div class="feedback__name"><?php the_field( 'first_name', 2 ); ?></div>
-                        <div class="feedback__descr"><span><?php the_field( 'first_position', 2 ); ?></span>
-                            <br><br>
+                        <div class="feedback__position"><?php the_field( 'first_position', 2 ); ?></div>
+                        <div class="feedback__descr">    
                             <?php the_field( 'first_review', 2 ); ?> 
                         </div>
                     </div>
@@ -200,9 +200,9 @@
                     <img src="<?php the_field( 'second_review_img', 2 ); ?>" alt="photo" class="feedback__img">
                     <div class="feedback__text">
                         <div class="feedback__name"><?php the_field( 'second_name', 2 ); ?></div>
-                        <div class="feedback__descr"><span><?php the_field( 'second_position', 2 ); ?></span>
-                            <br><br>
-                            <?php the_field( 'second_review', 2 ); ?>
+                        <div class="feedback__position"><?php the_field( 'second_position', 2 ); ?></div>
+                        <div class="feedback__descr">    
+                            <?php the_field( 'second_review', 2 ); ?> 
                         </div>
                     </div>
                 </div>
@@ -211,9 +211,9 @@
                     <img src="<?php the_field( 'third_review_img', 2 ); ?>" alt="photo" class="feedback__img">
                     <div class="feedback__text">
                         <div class="feedback__name"><?php the_field( 'third_name', 2 ); ?>
-                        <div class="feedback__descr"><span><?php the_field( 'third_position', 2 ); ?></span>
-                            <br><br>
-                            <?php the_field( 'third_review', 2 ); ?>
+                        <div class="feedback__position"><?php the_field( 'third_position', 2 ); ?></div>
+                        <div class="feedback__descr">    
+                            <?php the_field( 'third_review', 2 ); ?> 
                         </div>
                     </div>
                 </div>

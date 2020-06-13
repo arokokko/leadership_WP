@@ -1121,15 +1121,17 @@ a.promo__item:hover {
 }
 
 .feedback__descr {
-  margin-top: 10px;
+  color: #0d0d0d;
   font-size: 16px;
+}
+.feedback__descr, .feedback__position {
+  margin-top: 10px;
   font-weight: 300;
   line-height: 1.5;
   text-align: left;
-  color: #0d0d0d;
 }
 
-.feedback__descr span {
+.feedback__position {
   font-size: 14px;
   color: #646464;
 }
@@ -1436,6 +1438,9 @@ a.promo__item:hover {
     margin-top: 20px;
     text-align: center;
   }
+  .feedback__position {
+    text-align: center;
+  }
   .feedback__img {
     margin-right: 0;
   }
@@ -1516,6 +1521,9 @@ a.promo__item:hover {
   .modal {
     padding: 30px 15px 30px 15px;
     min-height: 330px;
+  }
+  .modal .modal_mini {
+    min-height: 140px;
   }
   .modal_btn {
     height: 40px;
