@@ -35,9 +35,9 @@ Template Name: Info Accounting
         </div>
     </section>
 
-    <section  class="catalog">
+    <section  class="catalog" id="catal">
         <div class="container">
-            <h2 class="title" id="catal"><?php the_field( 'page_info_subtitle' ); ?></h2>
+            <h2 class="title"><?php the_field( 'page_info_subtitle' ); ?></h2>
             <div class="catalog__info">
                 <?php 
                     $posts = get_posts( array(

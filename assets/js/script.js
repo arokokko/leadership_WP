@@ -90,32 +90,6 @@ $(document).ready(function(){
         }
 	});
 	
-	//validate
-	function valideForms(form) {
-		$(form).validate({
-			rules: {                
-				name: "required",
-				phone: "required",
-				email: {
-					required: true,
-					email: true
-				}
-			},
-			messages: {
-				name: "Please input your name",
-				phone: "Please input your phone number",
-				email: {
-					required: "Please input your email",
-					email: "Email should be in format name@domain.com"
-				}
-			}
-		});
-	}
-	valideForms('#consultation-form');
-	valideForms('#consultation form');
-	valideForms('#order form');
-	valideForms('#question form');
-
 
 	// отправка писем
 	$('form').submit(function(e) {               /* обращаемся ко всем form */
@@ -153,7 +127,7 @@ $(document).ready(function(){
 	$('a[href="#catal"]').on('click', function(e){
 		e.preventDefault();
 		const __href = $(this).attr('href');
-		$('html,body').animate({ scrollTop: $(__href).offset().top - 50 }, 1000);
+		$('html,body').animate({ scrollTop: $(__href).offset().top }, 1000);
 	});
 
 	$('a[href="#main"]').on('click', function(e){
@@ -162,8 +136,5 @@ $(document).ready(function(){
 		$('html,body').animate({ scrollTop: $(__href).offset().top - 50 }, 1000);
 	});
 	
-
-	//скрипт для анимаций
-	// new WOW().init();
 });
 

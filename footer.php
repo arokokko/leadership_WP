@@ -40,7 +40,7 @@
         <div class="modal" id="order">
             <div class="modal__close">&times;</div>
             <h2 class="modal__subtitle">Your order:</h2>
-            <div class="modal__descr">Пульсометер FT-1</div>
+            <div class="modal__descr">Type of service</div>
             <form method="POST" action="#" class="form__feed modal_form">
                 <input name="name" required placeholder="Your name" type="text">
                 <input name="phone" required placeholder="Your phone number" type="text">
