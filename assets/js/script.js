@@ -129,12 +129,6 @@ $(document).ready(function(){
 		const __href = $(this).attr('href');
 		$('html,body').animate({ scrollTop: $(__href).offset().top }, 1000);
 	});
-
-	$('a[href="#main"]').on('click', function(e){
-		e.preventDefault();
-		const __href = $(this).attr('href');
-		$('html,body').animate({ scrollTop: $(__href).offset().top - 50 }, 1000);
-	});
 	
 });
 
