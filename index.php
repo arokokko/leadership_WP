@@ -36,19 +36,15 @@
             <h2 class="title advantages__subheader"><?php the_field( 'title', 2 ); ?></h2>
             <div class="advantages__wrapper">
                 <div class="advantages__item">
-                    <img src="<?php the_field( 'first_img', 2 ); ?>" alt="multi-languages" class="advantages__icon">
-                    <h3 class="subtitle advantages__title"><?php the_field( 'first_subtitle', 2 ); ?></h3>
-                    <div class="describe advantages__descr"><?php the_field( 'first_descr', 2 ); ?></div>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/HJVvVm-xR3o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="advantages__item">
-                    <img src="<?php the_field( 'second_img', 2 ); ?>" alt="business-project" class="advantages__icon advantages__icon_animated">
-                    <h3 class="subtitle advantages__title"><?php the_field( 'second_subtitle', 2 ); ?></h3>
-                    <div class="describe advantages__descr"><?php the_field( 'second_descr', 2 ); ?></div>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/SQuQtYCgki0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3 class="subtitle advantages__title">Find <a href="https://www.youtube.com/channel/UCdOMrlvsxmdaPfy9DDplSzg" target="_blank" title="Vietnam Story - youtube.com">more videos</a> about doing business in Vietnam</h3>
+                    
                 </div>
                 <div class="advantages__item">
-                    <img src="<?php the_field( 'third_img', 2 ); ?>" alt="business-support" class="advantages__icon">
-                    <h3 class="subtitle advantages__title"><?php the_field( 'third_subtitle', 2 ); ?></h3>
-                    <div class="describe advantages__descr"><?php the_field( 'third_descr', 2 ); ?></div>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/Zya9EyL16sE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
