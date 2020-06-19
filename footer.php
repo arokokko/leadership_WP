@@ -5,7 +5,7 @@
             <div class="footer__mail"><a href="mailto:<?php the_field('email', 2); ?>"><?php the_field('email', 2); ?></a></div>
             <div class="footer__phone"><a href="tel:<?php the_field('phone_link', 2); ?>"><?php the_field('phone_displayed', 2); ?></a></div> 
             <div class="footer__social">
-                <a href="<?php the_field('facebook', 2); ?>" class="footer__social_item" target='_blank'><span class="icon-facebook"></span></a>
+                <a href="<?php the_field('facebook', 2); ?>" class="footer__social_item" target='_blank' title='Facebook'><span class="icon-facebook"></span></a>
             </div>
         </div>
     </footer>

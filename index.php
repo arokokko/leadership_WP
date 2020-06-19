@@ -8,15 +8,15 @@
                 <h1 class="promo__header"><?php bloginfo('description'); ?></h1>
                 <h2 class="promo__subheader"><?php the_field('promo_subheader', 2); ?></h2>
                 <div class="promo__icons">
-                    <a class="promo__item" href='http://localhost/leadership/legal-advice-info/' target="_blank">
+                    <a class="promo__item" href='http://localhost/leadership/legal-advice-info/'>
                         <img class="promo__icon" src="<?php echo bloginfo('template_url');?>/assets/icons/consulting.svg" alt="timer"><br />
                         Legal advice
                     </a>
-                    <a class="promo__item" href='http://localhost/leadership/real-estate-info/' target="_blank">
+                    <a class="promo__item" href='http://localhost/leadership/real-estate-info/'>
                         <img class="promo__icon" src="<?php echo bloginfo('template_url');?>/assets/icons/real_estate.svg" alt="hand-cart"><br />
                         Real estate
                     </a>
-                    <a class="promo__item" href='http://localhost/leadership/accounting-info/' target="_blank">
+                    <a class="promo__item" href='http://localhost/leadership/accounting-info/'>
                         <img class="promo__icon" src="<?php echo bloginfo('template_url');?>/assets/icons/accounting1.svg" alt="messages"><br />
                         Accounting
                     </a>

@@ -12,15 +12,15 @@ Template Name: Info Real Estate
                 <h1 class="promo__header"><?php the_field( 'page_info_title' ); ?></h1>
                 <h2 class="promo__subheader"><?php the_field('promo_subheader', 2); ?></h2>
                 <div class="promo__icons">
-                    <a class="promo__item" href='http://localhost/leadership/legal-advice-info/' target="_blank">
+                    <a class="promo__item" href='http://localhost/leadership/legal-advice-info/'>
                         <img class="promo__icon" src="<?php echo bloginfo('template_url');?>/assets/icons/consulting.svg" alt="timer"><br />
                         Legal advice
                     </a>
-                    <div class="promo__item" id="red" href='http://localhost/leadership/real-estate-info/' target="_blank">
+                    <div class="promo__item" id="red" >
                         <img class="promo__icon" src="<?php echo bloginfo('template_url');?>/assets/icons/real_estate.svg" alt="hand-cart"><br />
                         Real estate
                     </div>
-                    <a class="promo__item" href='http://localhost/leadership/accounting-info/' target="_blank">
+                    <a class="promo__item" href='http://localhost/leadership/accounting-info/'>
                         <img class="promo__icon" src="<?php echo bloginfo('template_url');?>/assets/icons/accounting1.svg" alt="messages"><br />
                         Accounting
                     </a>
@@ -58,7 +58,7 @@ Template Name: Info Real Estate
                                     <h3 class="subtitle card__subtitle"><?php the_field( 'card_info_title' ); ?></h3>
                                     <div class="describe card__descr describe__info"><?php the_field( 'card_info_descr' ); ?></div>
                                     <div class="card__link">
-                                        <a href="<?php the_field( 'card_info_link' ); ?>" target="_blank">learn more</a>
+                                        <a href="<?php the_field( 'card_info_link' ); ?>">learn more</a>
                                     </div>
                                 </div>
                             </div>

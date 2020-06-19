@@ -20,13 +20,13 @@
                     </div>
                 </div>
                 <div class="promo__icons promo__icons_article">
-                    <a class="promo__item promo__item_article" href='http://localhost/leadership/legal-advice-info/' target="_blank">
+                    <a class="promo__item promo__item_article" href='http://localhost/leadership/legal-advice-info/'>
                         Legal advice
                     </a>
-                    <a class="promo__item promo__item_article" href='http://localhost/leadership/real-estate-info/' target="_blank">
+                    <a class="promo__item promo__item_article" href='http://localhost/leadership/real-estate-info/'>
                         Real estate
                     </a>
-                    <a class="promo__item promo__item_article" href='http://localhost/leadership/accounting-info/' target="_blank">
+                    <a class="promo__item promo__item_article" href='http://localhost/leadership/accounting-info/'>
                         Accounting
                     </a>
                 </div>
