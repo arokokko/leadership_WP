@@ -18,6 +18,15 @@
         wp_enqueue_script( 'leadership-scripts', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), null, true );
     }
 
+    function wcs_defer_javascripts ( $url ) { 
+        if( is_admin() ) return $url; 
+        if ( FALSE === strpos( $url, '.js' ) ) return $url; 
+        if ( strpos( $url, 'jquery.js' ) ) return $url; 
+        return "$url' defer='defer"; } 
+    add_filter( 'clean_url', 'wcs_defer_javascripts', 11, 1 );
+
+
+
     add_theme_support( 'custom-logo' );
 
 ?>
