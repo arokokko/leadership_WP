@@ -129,6 +129,10 @@ $(document).ready(function(){
 		const __href = $(this).attr('href');
 		$('html,body').animate({ scrollTop: $(__href).offset().top }, 1000);
 	});
+
+	setTimeout(function(){
+		document.getElementById('map').src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.0890137565843!2d24.13462201519957!3d56.964407705363364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb5269ce9db%3A0x9285344dd284540b!2zQ8STc3UgaWVsYSA1YiwgVmlkemVtZXMgcHJpZWvFoXBpbHPEk3RhLCBSxKtnYSwgTFYtMTAxMiwg0JvQsNGC0LLQuNGP!5e0!3m2!1sru!2s!4v1590760020557!5m2!1sru!2s';
+	  },3000);
 	
 });
 
