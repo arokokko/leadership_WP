@@ -1336,6 +1336,14 @@ a.promo__item:hover {
   .promo__wrapper {
     align-items: center;
   }
+  .advantages__wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .advantages__item {
+    margin-top: 30px;
+  }
   .catalog__content {
     padding-right: 30px;
     padding-left: 30px;
@@ -1382,15 +1390,13 @@ a.promo__item:hover {
   }
   .advantages__wrapper {
     margin-top: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
   }
-  .advantages__item:first-child {
+  /* .advantages__item:first-child {
     margin-right: 45px;
   }
   .advantages__item:last-child {
     margin-top: 30px;
-  }
+  } */
   .consultation {
     padding-top: 50px;
     padding-bottom: 40px;
@@ -1435,11 +1441,7 @@ a.promo__item:hover {
     flex-direction: column;
     align-items: center;
   }
-  .advantages__wrapper {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+  
   .advantages__item:first-child {
     margin-right: 0;
   }
