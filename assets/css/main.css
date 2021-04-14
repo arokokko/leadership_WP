@@ -348,6 +348,7 @@ template {
 
 .icon-facebook:before {
   content: "\ea90";
+  color: #fff;
 }
 
 .space {
@@ -949,6 +950,10 @@ a.promo__item:hover {
   font-size: 20px;
 }
 
+.catalog__link {
+  margin: 30px auto 0 auto;
+}
+
 .card {
   overflow: hidden;
   width: 300px;
@@ -978,10 +983,9 @@ a.promo__item:hover {
   justify-content: center;
 }
 
-.card__link > a {
+.card__link > div, .card__link > a, .subtitle a{
   margin-top: 17px;
   border-bottom: 1px solid #c70101;
-  font-size: 14px;
   line-height: .9;
   font-weight: 500;
   text-align: center;
@@ -989,9 +993,24 @@ a.promo__item:hover {
   text-transform: uppercase;
 }
 
+.card__link > div, .card__link > a {
+  font-size: 14px;
+}
+
+.subtitle a {
+  font-size: 18px;
+}
+.subtitle a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #c70101;
+}
+
 .card__link > a:hover {
   text-decoration: none;
-  color: #c70101;
+  font-weight: bold;
+  border-bottom: 2px solid #c70101;
+  /* color: #c70101; */
 }
 
 .card hr {
@@ -1153,49 +1172,75 @@ a.promo__item:hover {
 }
 
 .footer {
-  position: relative;
-  height: 630px;
-}
-
-.footer__map {
-  height: 630px;
+  /* height: 470px; */
+  background-color: #c70101;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer__contacts {
-  position: absolute;
-  padding: 30px 0 30px;
-  height: 270px;
-  width: 460px;
-  background-color: #c70101;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.footer__contact {
+  
+  margin-left: 20px;
+}
+
+.footer__contact:nth-child(2) {
+  
+  margin-left: 40px;
+}
+
+.footer__contacts-wrapper {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer__contacts-title, .footer__navigation-title {
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .footer__addr {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
   margin-bottom: 0;
-  text-align: center;
+}
+
+.footer__map {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 14px;
+  border-bottom: 1px dashed #fff;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .footer__phone, .footer__mail {
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.footer__phone span, 
+.footer__mail span{
+  font-size: 21px;
   font-weight: 700;
   line-height: 1;
 }
 
-.footer__mail a {
-  color: #ffffff;
-}
-
-.footer__phone a {
+.footer__mail a, 
+.footer__phone a, 
+.footer__privacy a,
+.nav__item a,
+.nav__subitem a {
   color: #ffffff;
 }
 
@@ -1210,7 +1255,6 @@ a.promo__item:hover {
   height: 50px;
   border: solid 2px #ffffff;
   border-radius: 100%;
-  color: #ffffff;
   margin: 0 15px;
 }
 
@@ -1224,6 +1268,54 @@ a.promo__item:hover {
 .footer__social_item:hover {
   color: #ffffff;
   text-shadow: 1px 1px 8px #ffffff;
+}
+
+.footer__navigation-wrapper {
+  margin-top: 20px;
+}
+
+.nav__list, .nav__sublist {
+  padding: 0;
+  margin-left: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+ 
+.nav__list {
+  font-size: 18px;
+}
+
+.nav__sublist {
+  font-size: 16px;
+  opacity: .8;
+}
+
+.nav__item, .nav__subitem {
+  padding: 0;
+  margin: 0;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 20px 20px;
+}
+
+.footer__bottom {
+  padding: 20px 0 10px 0;
+  width: 100%;
+  background-color: #c70101;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+  border-top: 1px solid #fff;
+}
+
+.footer__privacy {
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 .overlay {
@@ -1323,7 +1415,45 @@ a.promo__item:hover {
   color: #c70101;
 }
 
+table, thead {
+  border: 2px solid black;
+}
 
+
+table tr th {
+  border: 1px solid black;
+  padding: 7px;
+  background-color:rgb(155, 150, 150);
+}
+
+table tr td {
+  border: 1px solid black;
+  padding: 7px;
+}
+
+summary {
+  color: #007bff;
+}
+
+.wp-block-media-text__media img {
+  height: auto;
+}
+
+a.card__inner {
+  display: block;
+}
+
+a.card__inner:hover {
+  text-decoration: none;
+}
+
+a.card__inner:active {
+  text-decoration: none;
+}
+
+.margin-top_zero {
+  margin-top: 0;
+}
 
 @media (max-width: 999px) {
   .promo, .consultation, .feedback, .promo_article {
@@ -1337,6 +1467,7 @@ a.promo__item:hover {
     align-items: center;
   }
   .advantages__wrapper {
+    margin-top: 40px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -1354,16 +1485,12 @@ a.promo__item:hover {
   .catalog__card {
     margin: 0 20px 20px 20px;
   }
-  .footer {
-    height: 470px;
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
   }
-  .footer__contacts {
-    padding: 20px 0 20px;
-    height: 220px;
-    width: 400px;
-  }
-  .footer__addr, .footer__phone {
-    font-size: 18px;
+  .footer__navigation {
+    margin-top: 30px;
   }
   .footer__phone, .footer__mail {
     margin-top: 20px;
@@ -1387,9 +1514,6 @@ a.promo__item:hover {
 
   .promo__item_article {
     margin: 8px 0 8px;
-  }
-  .advantages__wrapper {
-    margin-top: 40px;
   }
   
   .consultation {
@@ -1436,13 +1560,6 @@ a.promo__item:hover {
     flex-direction: column;
     align-items: center;
   }
-  
-  .advantages__item:first-child {
-    margin-right: 0;
-  }
-  .advantages__item:nth-child(2) {
-    margin-top: 30px;
-  }
   .feedback__inner {
     flex-direction: column;
     align-items: center;
@@ -1476,6 +1593,13 @@ a.promo__item:hover {
   .modal__descr {
     font-size: 13px;
   }
+  .footer__contacts-wrapper {
+    flex-direction: column;
+}
+  .footer__contact:nth-child(2) {
+    margin-left: 20px;
+    margin-top: 30px;
+}
 }
 
 @media (max-width: 460px) {
@@ -1525,17 +1649,11 @@ a.promo__item:hover {
   .advantages__subheader {
     font-size: 23px;
   }
-  .footer__contacts {
-    width: 100%;
-  }
-  .footer__addr, .footer__phone {
-    font-size: 16px;
-  }
   .modal {
     padding: 30px 15px 30px 15px;
     min-height: 330px;
   }
-  .modal .modal_mini {
+  .modal_mini {
     min-height: 140px;
   }
   .modal_btn {
@@ -1572,5 +1690,24 @@ a.promo__item:hover {
   }
   .form__feed {
     width: 100%;
+  }
+  .footer__top {
+    padding: 20px 10px;
+  }
+  .footer__contacts-title, 
+  .footer__navigation-title {
+    font-size: 28px;
+  }
+  .footer__phone span, 
+  .footer__mail span {
+    font-size: 18px;
+  }
+  .footer__phone, 
+  .footer__mail,
+  .footer__addr {
+    font-size: 16px;
+  }
+  .footer__bottom {
+    padding: 10px;
   }
 }
