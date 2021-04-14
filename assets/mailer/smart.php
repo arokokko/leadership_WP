@@ -1,5 +1,5 @@
 <?php 
-
+$order = $_POST['order'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
@@ -29,6 +29,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Данные';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
+	Order: ' . $order . ' <br> 
 	Имя: ' . $name . ' <br>
 	Номер телефона: ' . $phone . '<br>
 	E-mail: ' . $email . ' <br>

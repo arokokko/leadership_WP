@@ -40,6 +40,7 @@ $(document).ready(function(){
         $(this).on('click', function() {
             let descr = $('.card__subtitle').eq(i).text();
             $('#order .modal__descr').text(descr);
+			$('#hidden_field').val(descr);
 			$('.overlay, #order').fadeIn('slow');
         });
 
