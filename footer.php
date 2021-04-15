@@ -18,8 +18,8 @@
                         </div> 
                         <div class="footer__social">
                             <a href="<?php the_field('facebook', 2); ?>" class="footer__social_item" target='_blank' title='Facebook'><span class="icon-facebook"></span></a>
-                            <a href="<?php the_field('facebook', 2); ?>" class="footer__social_item" target='_blank' title='Facebook'><span class="icon-facebook"></span></a>
-                            <a href="<?php the_field('facebook', 2); ?>" class="footer__social_item" target='_blank' title='Facebook'><span class="icon-facebook"></span></a>
+                            <a href="<?php the_field('whatsapp', 2); ?>" class="footer__social_item" target='_blank' title='Whatsapp'><span class="icon-whatsapp"></span></a>
+                            <a href="<?php the_field('telegram', 2); ?>" class="footer__social_item" target='_blank' title='Telegram'><span class="icon-telegram"></span></a>
                         </div>
                     </div>
                     <div class="footer__contact">
@@ -71,7 +71,7 @@
     <div class="overlay">
         <div class="modal_maxi" id="map">
             <div class="modal__close">&times;</div>
-            <iframe id='google_map' src="" width="100%" frameborder="0" style="border:0;" allowfullscreen="">
+            <iframe id='google_map' src="" width="100%" min-height="100%" frameborder="0" style="border:0;" allowfullscreen="">
             </iframe>
         </div>
         <div class="modal" id="question">

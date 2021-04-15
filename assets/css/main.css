@@ -345,10 +345,34 @@ template {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .icon-facebook:before {
-  content: "\ea90";
-  color: #fff;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  height: 25px;
+  width: 16px;
+  background-image: url(../icons/facebook_icon.svg);
+}
+
+.icon-whatsapp:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -2px;
+  height: 35px;
+  width: 30px;
+  background-image: url(../icons/whatsapp_icon.svg);
+}
+
+.icon-telegram:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  height: 30px;
+  width: 26px;
+  background-image: url(../icons/telegram_icon.svg);
 }
 
 .space {
@@ -1254,7 +1278,7 @@ a.promo__item:hover {
   width: 50px;
   height: 50px;
   border: solid 2px #ffffff;
-  border-radius: 100%;
+  border-radius: 30%;
   margin: 0 15px;
 }
 
