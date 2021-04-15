@@ -1,7 +1,29 @@
 
 
 $(document).ready(function(){
+	const contactsWrapper = document.querySelector('.footer__contacts-wrapper');
+	const mapTriggers = contactsWrapper.querySelectorAll('[data-modal=map]');
+	const mapDestination = document.querySelector('#google_map');
 
+	// функция загрузки и показа карты
+	showMap();
+	function showMap() {
+
+		contactsWrapper.addEventListener('click', ({target}) => {
+			if(target.hasAttribute('data-src')) {
+				mapTriggers.forEach((item) => {
+					if(item === target) {
+						mapDestination.src = item.getAttribute('data-src');
+					}
+				});
+			}
+			return; 
+		});
+	}
+
+	function cleanIframe() {
+		mapDestination.src = "";
+	}
 
 	// tabs
 	$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
@@ -34,6 +56,10 @@ $(document).ready(function(){
 		$('.overlay, #question').fadeIn('slow');
 	});
 
+	$('[data-modal=map]').on('click', function(){
+		$('.overlay, #map').fadeIn('slow');
+	});
+
 
 	$('.card_btn').each(function(i) {
 
@@ -46,14 +72,17 @@ $(document).ready(function(){
 
   	});
 
+	// закрытие модального окна
 	$('.modal__close').on('click', function() {
-		$('.overlay, #consultation, #question, #order, #thanks').fadeOut();
+		$('.overlay, #consultation, #question, #order, #thanks, #map').fadeOut();
+		cleanIframe();
 	});
 
 	// закрытие модального окна щелчком по пустому полю
 	$(window).on('click', function(e) {
         if (e.target.classList.contains('overlay')) {
-            $('.overlay, #consultation, #question, #thanks, #order').fadeOut();
+            $('.overlay, #consultation, #question, #thanks, #order, #map').fadeOut();
+			cleanIframe();
         }
 	});
 	
@@ -97,13 +126,6 @@ $(document).ready(function(){
 		$('html,body').animate({ scrollTop: $(__href).offset().top }, 1000);
 	});
 
-
-	// setTimeout(getMap, 3000);
-	
-	// function getMap() {
-	// 	document.getElementById('map').src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7798.40626024172!2d109.18995827436449!3d12.234521203319698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317067abd48056bb%3A0xcbba08a13cd1b44b!2sLeadership%20TSC!5e0!3m2!1sru!2s!4v1617514419581!5m2!1sru!2s" ;
-	// }
-	
 
 	
 
