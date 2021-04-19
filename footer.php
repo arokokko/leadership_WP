@@ -53,6 +53,9 @@
                             </ul>
                         </ol>
                         <ol class="nav__item">
+                            <a href="https://leadershipnt.com/prices-for-services/">Pricing</a>
+                        </ol>
+                        <ol class="nav__item">
                             <a href="https://leadershipnt.com/about-company/">About us</a>
                         </ol>
                         <ol class="nav__item">

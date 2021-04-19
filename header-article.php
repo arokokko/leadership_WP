@@ -23,14 +23,17 @@
                     <a class="promo__item promo__item_article" href='https://leadershipnt.com/articles/'>
                         Articles
                     </a>
+                    <a class="promo__item promo__item_article" href='https://leadershipnt.com/prices-for-services/'>
+                        Pricing
+                    </a>
                     <a class="promo__item promo__item_article" href='https://leadershipnt.com/about-company/'>
                         About us
                     </a>
+                   
+                </nav>
+                <div class="header__contact">
                     <a class="promo__item promo__item_article" href='https://leadershipnt.com/our-contacts/'>
                         Contacts
                     </a>
-                </nav>
-                <div class="header__contact">
-                    <button data-modal="question" class="button header_btn">Ask your question</button>
                 </div>
             </header>
