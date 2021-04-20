@@ -1030,11 +1030,9 @@ a.promo__item:hover {
   border-bottom: 2px solid #c70101;
 }
 
-.card__link > a:hover {
+.card__link > a:hover, .card__link > div:hover {
   text-decoration: none;
   font-weight: bold;
-  border-bottom: 2px solid #c70101;
-  /* color: #c70101; */
 }
 
 .card hr {
@@ -1548,6 +1546,9 @@ a.card__inner:active {
   a.promo__item:hover {
     color: #fff;
   }
+  a.promo__item:active {
+    color: #c70101;
+  }
   .promo__icons_article {
     flex-direction: column;
     width: 30%;
@@ -1577,6 +1578,26 @@ a.card__inner:active {
   .button:hover {
     box-shadow: none;
     transform: none;
+  }
+  .subtitle a:hover {
+    font-weight: 500;
+    border-bottom: 1px solid #c70101;
+  }
+  .subtitle a:active {
+    font-weight: bold;
+    border-bottom: 2px solid #c70101;
+  }
+  .promo__link > a:hover {
+    color: #fff;
+  }
+  .promo__link > a:active {
+    color: #c70101;
+  }
+  .card__link > a:hover, .card__link > div:hover {
+    font-weight: 500;
+  }
+  .card__link > a:active, .card__link > div:active {
+    font-weight: bold;
   }
 }
 
