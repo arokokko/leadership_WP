@@ -156,6 +156,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  height: auto;
 }
 
 svg {
@@ -481,30 +482,6 @@ template {
   }
 }
 
-@-webkit-keyframes heartbeat {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
 * {
   font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -746,7 +723,6 @@ a.promo__item:hover {
 
 .button:hover {
   box-shadow: 2px 2px 20px #ffffff;
-  transform: scale(1.02);
 }
 
 .header_btn {
@@ -777,14 +753,10 @@ a.promo__item:hover {
   background-color: #c70101;
 }
 
-.card_btn:hover {
+.card_btn:hover, 
+.modal_btn:hover, 
+.cookie_btn:hover  {
   box-shadow: 2px 2px 20px #c70101;
-  transform: scale(1.02);
-}
-
-.modal_btn:hover {
-  box-shadow: 2px 2px 20px #c70101;
-  transform: scale(1.02);
 }
 
 .advantages {
@@ -1030,7 +1002,9 @@ a.promo__item:hover {
   border-bottom: 2px solid #c70101;
 }
 
-.card__link > a:hover, .card__link > div:hover {
+.card__link > a:hover, 
+.card__link > div:hover,
+.cookie__text > a:hover {
   text-decoration: none;
   font-weight: bold;
 }
@@ -1494,6 +1468,43 @@ a.card__inner:active {
   margin-top: 0;
 }
 
+.hide {
+  display: none;
+}
+
+.cookie__wrapper {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #c70101;
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 24rem;
+  font-size: 18px;
+  text-align: center;
+  opacity: .9;
+}
+
+.cookie__text > a{
+  color: #c70101;
+  border-bottom: 1px solid #c70101;
+  line-height: .9;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.cookie_btn {
+  width: 180px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
 @media (max-width: 999px) {
   .promo, .consultation, .feedback, .promo_article {
     padding-left: 20px;
@@ -1661,7 +1672,28 @@ a.card__inner:active {
   .footer__contact:nth-child(2) {
     margin-left: 20px;
     margin-top: 30px;
-}
+  }
+  .cookie__wrapper {
+    bottom: 0;
+    right: 0;
+    border: none;
+    padding: .5rem;
+    border-radius: 0;
+    max-width: 100%;
+    font-size: 16px;
+  }
+  
+  .cookie__text > a{
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  
+  .cookie_btn {
+    width: 140px;
+    height: 35px;
+    margin-top: .5rem;
+  }
 }
 
 @media (max-width: 460px) {

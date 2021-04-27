@@ -120,12 +120,22 @@
         <div class="modal modal_mini" id="thanks">
             <div class="modal__close">&times;</div>
             <h2 class="modal__subtitle">Thank you for your request!</h2>
-            <div class="modal__descr">We will connect to you nearest time!</div>
+            <div class="modal__descr">We will contact you shortly!</div>
+            <!-- Event snippet for Website traffic conversion page -->
         </div>
     </div>
     <a href="#up" class="pageup">
         <img src="<?php echo bloginfo('template_url');?>/assets/icons/circle-up.svg" alt="arrow_up" title="Up">
     </a>
+    <div class="cookie__wrapper hide" id="cookie">
+        <div class="container">
+            <div class="cookie__text">
+                This website uses cookies to marketing and analyze traffic purposes.<br>
+                <a href="https://www.cookiesandyou.com" target="_blank"> Learn more</a>
+            </div>
+            <button class="button cookie_btn" data-modal="cookie">Got it</button>
+        </div>
+    </div>
     
     <?php 
         wp_footer();
