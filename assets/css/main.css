@@ -1209,13 +1209,24 @@ a.promo__item:hover {
   margin-bottom: 0;
 }
 
-.footer__map {
+.footer__map,
+.footer__mail-copy {
   display: inline-block;
   margin-top: 5px;
   font-size: 14px;
   border-bottom: 1px dashed #fff;
+  color: #fff;
+  text-decoration: none;
   opacity: 0.7;
-  cursor: pointer;
+  transition: all .3s;
+}
+
+.footer__map:hover,
+.footer__mail-copy:hover {
+  
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
 }
 
 .footer__phone, .footer__mail {
@@ -1609,6 +1620,19 @@ a.card__inner:active {
   }
   .card__link > a:active, .card__link > div:active {
     font-weight: bold;
+  }
+  .footer__map:hover,
+  .footer__mail-copy:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: .7;
+  }
+  .footer__map:active,
+  .footer__mail-copy:active {
+    
+    color: #fff;
+    text-decoration: none;
+    opacity: 1;
   }
 }
 

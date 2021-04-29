@@ -9,10 +9,11 @@
                 <div class="footer__contacts-wrapper">
                     <div class="footer__contact">
                         <div class="footer__addr"><?php the_field('address', 2); ?></div>
-                        <div class="footer__map" data-modal="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7798.40626024172!2d109.18995827436449!3d12.234521203319698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317067abd48056bb%3A0xcbba08a13cd1b44b!2sLeadership%20TSC!5e0!3m2!1sru!2s!4v1617514419581!5m2!1sru!2s">show on the map</div>
+                        <a href="" class="footer__map" data-modal="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7798.40626024172!2d109.18995827436449!3d12.234521203319698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317067abd48056bb%3A0xcbba08a13cd1b44b!2sLeadership%20TSC!5e0!3m2!1sru!2s!4v1617514419581!5m2!1sru!2s">show on the map</a>
                         <div class="footer__mail">
-                            <span>Email: </span><a href="mailto:<?php the_field('email', 2); ?>"><?php the_field('email', 2); ?></a>
+                            <span>Email: </span><a href="mailto:<?php the_field('email', 2); ?>" class="footer__mail-forcopy"><?php the_field('email', 2); ?></a>
                         </div>
+                        <a href="" class="footer__mail-copy">copy the email</a>
                         <div class="footer__phone">
                             <span>Phone: </span><a href="tel:<?php the_field('phone_link', 2); ?>"><?php the_field('phone_displayed', 2); ?></a>
                         </div> 
@@ -24,10 +25,7 @@
                     </div>
                     <div class="footer__contact">
                         <address class="footer__addr"><?php the_field('address', 2); ?></address>
-                        <div class="footer__map" data-modal="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7798.40626024172!2d109.18995827436449!3d12.234521203319698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317067abd48056bb%3A0xcbba08a13cd1b44b!2sLeadership%20TSC!5e0!3m2!1sru!2s!4v1617514419581!5m2!1sru!2s">show on the map</div>
-                        <div class="footer__mail">
-                            <span>Email: </span><a href="mailto:<?php the_field('email', 2); ?>"><?php the_field('email', 2); ?></a>
-                        </div>
+                        <a href="" class="footer__map" data-modal="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7798.40626024172!2d109.18995827436449!3d12.234521203319698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317067abd48056bb%3A0xcbba08a13cd1b44b!2sLeadership%20TSC!5e0!3m2!1sru!2s!4v1617514419581!5m2!1sru!2s">show on the map</a>
                     </div>
                 </div>
             </div>

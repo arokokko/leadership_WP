@@ -5,13 +5,15 @@ $(document).ready(function(){
 	const mapTriggers = contactsWrapper.querySelectorAll('[data-modal=map]');
 	const mapDestination = document.querySelector('#google_map');
 	const thanks = document.querySelector('#thanks');
+	const elemForCopy = document.querySelector('.footer__mail-forcopy');
+	const copyEmail = document.querySelector(".footer__mail-copy");
 	
 
 	// maps
-	showMap();
 	function showMap() {
-
-		contactsWrapper.addEventListener('click', ({target}) => {
+		contactsWrapper.addEventListener('click', (e) => {
+			e.preventDefault();
+			const target = e.target;
 			if(target.hasAttribute('data-src')) {
 				mapTriggers.forEach((item) => {
 					if(item === target) {
@@ -23,22 +25,15 @@ $(document).ready(function(){
 		});
 	}
 
-	function addScriptGoogle() {
-		if(document.querySelector('.googleScript')) {
-			return;
-		} else {
-			const script = document.createElement('script');
-			script.classList.add('googleScript');
-			script.type = 'text/javascript';
-			script.innerHTML = "gtag('event', 'conversion', {'send_to': 'AW-379395261/Ota3CLO-u4sCEL259LQB'})";
-			thanks.appendChild(script);
-		}
-		
-	}
-
 	function cleanIframe() {
 		mapDestination.src = "";
 	}
+
+	// modal map appear
+	$('[data-modal=map]').on('click', function(){
+		$('.overlay, #map').fadeIn('slow');
+		showMap();
+	});
 
 	// cookie 
 	const cookieStorage = {
@@ -70,6 +65,12 @@ $(document).ready(function(){
 
 	showCookiePopup();
 
+	// cookie modal disappear
+	$('[data-modal=cookie]').on('click', function(){
+		saveToStorage();
+		$('#cookie').fadeOut('slow');
+	});
+
 	// tabs
 	$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
 		$(this)
@@ -92,7 +93,6 @@ $(document).ready(function(){
 	toggleSlide('.card__goback');
 
 	// Modal windows
-
 	$('[data-modal=consultation]').on('click', function(){
 		$('.overlay, #consultation').fadeIn('slow');
 	});
@@ -101,16 +101,9 @@ $(document).ready(function(){
 		$('.overlay, #question').fadeIn('slow');
 	});
 
-	// modal map
-	$('[data-modal=map]').on('click', function(){
-		$('.overlay, #map').fadeIn('slow');
-	});
+	
 
-	// cookie modal
-	$('[data-modal=cookie]').on('click', function(){
-		saveToStorage();
-		$('#cookie').fadeOut('slow');
-	});
+	
 
 	$('.card_btn').each(function(i) {
 
@@ -176,6 +169,38 @@ $(document).ready(function(){
 		e.preventDefault();
 		const __href = $(this).attr('href');
 		$('html,body').animate({ scrollTop: $(__href).offset().top }, 1000);
+	});
+
+	// google metrica
+	function addScriptGoogle() {
+		if(document.querySelector('.googleScript')) {
+			return;
+		} else {
+			const script = document.createElement('script');
+			script.classList.add('googleScript');
+			script.type = 'text/javascript';
+			script.innerHTML = "gtag('event', 'conversion', {'send_to': 'AW-379395261/Ota3CLO-u4sCEL259LQB'})";
+			thanks.appendChild(script);
+		}
+	}
+
+	// copy email to clipboard
+	function getCopy() {
+		const range = document.createRange();
+		range.selectNode(elemForCopy);
+		window.getSelection().removeAllRanges();
+		window.getSelection().addRange(range);
+		document.execCommand('copy');
+		window.getSelection().removeAllRanges();
+		copyEmail.textContent = "copied";
+		setTimeout(() => {
+			copyEmail.textContent = "copy the email";
+		}, 1000);
+	}
+
+	copyEmail.addEventListener('click', (e) => {
+		e.preventDefault();
+		getCopy();
 	});
 
 });
