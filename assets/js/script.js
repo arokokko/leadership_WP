@@ -46,7 +46,7 @@ $(document).ready(function(){
 			return cookies[key];
 		},
 		setItem: (key, value) => {
-			document.cookie = `${key}=${value};max-age=31536000`;
+			document.cookie = `${key}=${value};max-age=31536000;domain=.leadershipnt.com;path=/`;
 		}
 	};
 	const storageType = cookieStorage;
